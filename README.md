@@ -1,7 +1,7 @@
-# TE_NODE_ROM
+# TE-skin-NODE-ROM
 Code for the paper:
 
-"Stable Long-Horizon Predictions of Neural ODE Reduced-Order Models of Tissue Expansion via Learned Feature Feedback"
+**"Stable Long-Horizon Predictions of Neural ODE Reduced-Order Models of Tissue Expansion via Learned Feature Feedback"**
 
 ## 🧠 Overview
 This repository contains the implementation of Neural Ordinary Differential Equation (NODE) reduced-order models (ROMs) for tissue expansion. The model learns low-dimensional latent dynamics of the coupled deformation and growth response and uses learned feature feedback to improve long-horizon stability and accuracy. The framework is designed to provide a fast surrogate for high-fidelity finite element simulations of tissue expansion.
