@@ -7,13 +7,8 @@ Columbia University).
 
 This repository reproduces the methods, quantitative results, tables, and
 figures reported in the manuscript and its Supplementary Information (SI).
-It is a focused reproducibility package, not a dump of the full research
-project -- exploratory work, abandoned model variants, and superseded
-training/evaluation code (e.g. an early tail-loss training scheme and an
-explicit-Euler growth integrator later replaced by a UMAT-matched
-implicit-Newton integrator) are intentionally excluded. See
-[data/DATA_AVAILABILITY.md](data/DATA_AVAILABILITY.md) for what data is and
-isn't bundled here.
+See [data/DATA_AVAILABILITY.md](data/DATA_AVAILABILITY.md) for what data is
+and isn't bundled here.
 
 ## Background
 
