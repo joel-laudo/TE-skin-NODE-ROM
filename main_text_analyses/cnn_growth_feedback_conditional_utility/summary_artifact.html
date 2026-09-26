@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model D CNN Growth Feedback — Conditional Redundancy Findings</title>
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    --surface-2: #F2F1EC;
+    --ink: #1C2024;
+    --ink-secondary: #5B6570;
+    --ink-tertiary: #8A929A;
+    --accent: #2F6F5E;
+    --accent-strong: #1E4B3F;
+    --accent-soft: #E4EFEC;
+    --model-a: #3A6EA5;
+    --model-a-soft: #E4ECF5;
+    --sev-1: #D9A392;
+    --sev-2: #BE6B4E;
+    --sev-3: #8B2E1F;
+    --border: #E3E1DA;
+    --border-strong: #C9C6BC;
+    --shadow: 0 1px 2px rgba(28,32,36,0.04), 0 4px 16px rgba(28,32,36,0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181A;
+      --surface: #1B2023;
+      --surface-2: #20262A;
+      --ink: #ECEDEE;
+      --ink-secondary: #A7B0B6;
+      --ink-tertiary: #78838A;
+      --accent: #59B39A;
+      --accent-strong: #7FCBB4;
+      --accent-soft: #1E332E;
+      --model-a: #7FADDE;
+      --model-a-soft: #1D2A38;
+      --sev-1: #C08A79;
+      --sev-2: #CF8362;
+      --sev-3: #D9614A;
+      --border: #2B3134;
+      --border-strong: #3B4448;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181A; --surface: #1B2023; --surface-2: #20262A; --ink: #ECEDEE;
+    --ink-secondary: #A7B0B6; --ink-tertiary: #78838A; --accent: #59B39A;
+    --accent-strong: #7FCBB4; --accent-soft: #1E332E; --model-a: #7FADDE;
+    --model-a-soft: #1D2A38; --sev-1: #C08A79; --sev-2: #CF8362; --sev-3: #D9614A;
+    --border: #2B3134; --border-strong: #3B4448;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #FAFAF8; --surface: #FFFFFF; --surface-2: #F2F1EC; --ink: #1C2024;
+    --ink-secondary: #5B6570; --ink-tertiary: #8A929A; --accent: #2F6F5E;
+    --accent-strong: #1E4B3F; --accent-soft: #E4EFEC; --model-a: #3A6EA5;
+    --model-a-soft: #E4ECF5; --sev-1: #D9A392; --sev-2: #BE6B4E; --sev-3: #8B2E1F;
+    --border: #E3E1DA; --border-strong: #C9C6BC;
+    --shadow: 0 1px 2px rgba(28,32,36,0.04), 0 4px 16px rgba(28,32,36,0.05);
+  }
+
+  * { box-sizing: border-box; }
+  html { color-scheme: light dark; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 56px 24px 80px; }
+  h1, h2, h3 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-weight: 600;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0;
+  }
+  .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+  /* ---------- Header ---------- */
+  .kicker {
+    font-size: 12.5px; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent-strong); font-weight: 700; margin-bottom: 14px;
+  }
+  h1 { font-size: 34px; line-height: 1.22; letter-spacing: -0.01em; }
+  .subquestion {
+    margin-top: 16px; font-size: 17px; color: var(--ink-secondary); max-width: 66ch;
+  }
+  .verdict {
+    margin-top: 26px; display: inline-flex; align-items: baseline; gap: 10px;
+    background: var(--accent-soft); border: 1px solid var(--accent);
+    border-radius: 8px; padding: 12px 18px;
+  }
+  .verdict .tag {
+    font-family: Georgia, serif; font-weight: 700; font-size: 15px; color: var(--accent-strong);
+  }
+  .verdict .desc { font-size: 14.5px; color: var(--ink); }
+
+  hr.rule { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  /* ---------- Chain ---------- */
+  .chain-title { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-tertiary); font-weight: 700; margin-bottom: 20px; }
+  .chain { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 760px) { .chain { grid-template-columns: 1fr; } }
+  .step {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 16px; box-shadow: var(--shadow); position: relative;
+  }
+  .step .n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 700; font-family: Georgia, serif; margin-bottom: 12px;
+  }
+  .step h3 { font-size: 15.5px; margin-bottom: 6px; }
+  .step p { font-size: 13.5px; color: var(--ink-secondary); margin: 0 0 12px; }
+  .step .metric { font-size: 22px; font-weight: 700; color: var(--accent-strong); }
+  .step .metric-label { font-size: 12px; color: var(--ink-tertiary); margin-top: 2px; }
+  .arrow-row { display: flex; justify-content: center; align-items: center; margin: -2px 0; }
+  .arrow-row svg { width: 100%; height: 18px; opacity: 0.35; }
+
+  /* ---------- Chart section ---------- */
+  .section-title { font-size: 22px; margin-bottom: 6px; }
+  .section-sub { font-size: 14.5px; color: var(--ink-secondary); margin-top: 4px; max-width: 68ch; }
+  .chart-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 20px 8px; margin-top: 22px; box-shadow: var(--shadow); overflow-x: auto;
+  }
+  .chart-caption { font-size: 12.5px; color: var(--ink-tertiary); padding: 4px 4px 14px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; padding: 0 4px 16px; font-size: 12.5px; color: var(--ink-secondary); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+
+  /* ---------- Hypothesis table ---------- */
+  .hyp-list { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+  .hyp-row {
+    display: grid; grid-template-columns: 28px 100px 1fr; gap: 14px; align-items: start;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px;
+  }
+  .hyp-row.confirmed { border-color: var(--accent); background: var(--accent-soft); }
+  .hyp-mark { font-size: 18px; font-weight: 700; line-height: 1.4; }
+  .hyp-row.confirmed .hyp-mark { color: var(--accent-strong); }
+  .hyp-row:not(.confirmed) .hyp-mark { color: var(--sev-3); opacity: 0.75; }
+  .hyp-label { font-weight: 700; font-size: 13.5px; padding-top: 2px; }
+  .hyp-desc { font-size: 13.5px; color: var(--ink-secondary); }
+  .hyp-desc b { color: var(--ink); }
+
+  /* ---------- Interpretation callout ---------- */
+  .callout {
+    margin-top: 40px; border-left: 3px solid var(--accent); background: var(--surface-2);
+    border-radius: 0 10px 10px 0; padding: 22px 26px; font-size: 15.5px; color: var(--ink);
+  }
+  .callout p { margin: 0 0 12px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* ---------- Caveats ---------- */
+  details.caveats {
+    margin-top: 40px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+  }
+  details.caveats summary {
+    cursor: pointer; padding: 14px 18px; font-size: 13.5px; font-weight: 700;
+    color: var(--ink-secondary); list-style: none; display: flex; align-items: center; gap: 8px;
+  }
+  details.caveats summary::-webkit-details-marker { display: none; }
+  details.caveats summary::before { content: "+"; font-family: Georgia, serif; font-size: 16px; color: var(--accent); }
+  details.caveats[open] summary::before { content: "\2212"; }
+  details.caveats .body { padding: 0 18px 18px; font-size: 13.5px; color: var(--ink-secondary); }
+  details.caveats ul { margin: 0; padding-left: 20px; }
+  details.caveats li { margin-bottom: 8px; }
+
+  footer { margin-top: 56px; font-size: 12.5px; color: var(--ink-tertiary); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Skin-Growth NODE ROM — Model D mechanistic analysis</div>
+  <h1>Model D's CNN growth pathway is genuinely used — and fully redundant with Model A's own information</h1>
+  <p class="subquestion">Do Models A and D reach similar accuracy because explicit growth feedback is ignored, or because two different representations of the same coupled mechanics&ndash;growth state happen to carry overlapping information?</p>
+  <div class="verdict">
+    <span class="tag">Answer: the latter.</span>
+    <span class="desc">A clean H2 result — the CNN encodes growth, the NODE depends on it, and that dependency is on information Model A already has.</span>
+  </div>
+
+  <hr class="rule">
+
+  <div class="chain-title">The evidence chain</div>
+  <div class="chain">
+    <div class="step">
+      <div class="n">1</div>
+      <h3>Encoding</h3>
+      <p>Does the CNN feature vector h<sub>g</sub> actually encode the physical growth state?</p>
+      <div class="metric num">R&sup2; = 0.98</div>
+      <div class="metric-label">decoding 16D growth‑PCA from h<sub>g</sub></div>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <h3>Usage</h3>
+      <p>Does the neural ODE actually depend on h<sub>g</sub> during rollout?</p>
+      <div class="metric num">all Δ &gt; 0</div>
+      <div class="metric-label">every intervention significant, 95% CI excludes 0</div>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <h3>Predictability</h3>
+      <p>Is Model D's real h<sub>g</sub> reconstructible from Model A's own inputs?</p>
+      <div class="metric num">R&sup2; = 0.95</div>
+      <div class="metric-label">cosine similarity 0.999</div>
+    </div>
+    <div class="step">
+      <div class="n">4</div>
+      <h3>Substitution</h3>
+      <p>Does the reconstructed h<sub>g</sub> work online, live, in place of the real one?</p>
+      <div class="metric num">n.s.</div>
+      <div class="metric-label">&Delta; = +0.0001 cm, 95% CI includes 0</div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="section-title">The central result</h2>
+  <p class="section-sub">Median validation displacement RMSE across 185 held-out simulations, under six conditions. Model D's true CNN features, its live-reconstructed (Model‑A‑predicted) features, and Model A itself are statistically indistinguishable — while every degraded substitute is significantly worse, in clear dose-response order.</p>
+
+  <div class="chart-card">
+    <svg viewBox="0 0 760 400" width="100%" role="img" aria-label="Bar chart of median displacement RMSE across six conditions, log scale">
+      <defs>
+        <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+          <rect width="6" height="6" fill="var(--accent)"></rect>
+          <line x1="0" y1="0" x2="0" y2="6" stroke="var(--surface)" stroke-width="2"></line>
+        </pattern>
+      </defs>
+
+      <!-- gridlines -->
+      <g font-family="-apple-system,sans-serif" font-size="11" fill="var(--ink-tertiary)">
+        <!-- y positions computed from log10 scale, floor=-1 (0.1cm), ceiling=log10(5)=0.699 -->
+        <line x1="80" y1="310" x2="680" y2="310" stroke="var(--border-strong)" stroke-width="1"></line>
+        <text x="70" y="313" text-anchor="end">0.1</text>
+
+        <line x1="80" y1="260.4" x2="680" y2="260.4" stroke="var(--border)" stroke-width="1"></line>
+        <text x="70" y="263.4" text-anchor="end">0.2</text>
+
+        <line x1="80" y1="194.9" x2="680" y2="194.9" stroke="var(--border)" stroke-width="1"></line>
+        <text x="70" y="197.9" text-anchor="end">0.5</text>
+
+        <line x1="80" y1="145.3" x2="680" y2="145.3" stroke="var(--border)" stroke-width="1"></line>
+        <text x="70" y="148.3" text-anchor="end">1</text>
+
+        <line x1="80" y1="95.6" x2="680" y2="95.6" stroke="var(--border)" stroke-width="1"></line>
+        <text x="70" y="98.6" text-anchor="end">2</text>
+
+        <line x1="80" y1="30.2" x2="680" y2="30.2" stroke="var(--border)" stroke-width="1"></line>
+        <text x="70" y="33.2" text-anchor="end">5</text>
+
+        <text x="24" y="170" text-anchor="middle" transform="rotate(-90 24 170)" font-size="12" fill="var(--ink-secondary)">disp&#8209;RMSE (cm), log scale</text>
+      </g>
+
+      <!-- bars: x centers 130,230,330,430,530,630 ; width 64 -->
+      <!-- Model A: frac 0.074 -> h=20.7 -->
+      <rect x="98" y="289.3" width="64" height="20.7" rx="3" fill="var(--model-a)"></rect>
+      <text x="130" y="281" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)" class="num">0.134</text>
+
+      <!-- D true CNN: frac 0.092 -> h=25.8 -->
+      <rect x="198" y="284.2" width="64" height="25.8" rx="3" fill="var(--accent)"></rect>
+      <text x="230" y="276" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)" class="num">0.143</text>
+
+      <!-- D predicted CNN: frac 0.087 -> h=24.4, hatch pattern -->
+      <rect x="298" y="285.6" width="64" height="24.4" rx="3" fill="url(#hatch)" stroke="var(--accent-strong)" stroke-width="1.25"></rect>
+      <text x="330" y="277.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)" class="num">0.141</text>
+
+      <!-- bracket linking true (230) and predicted (330): n.s. -->
+      <path d="M 230 268 L 230 258 L 330 258 L 330 268" fill="none" stroke="var(--accent-strong)" stroke-width="1.25"></path>
+      <text x="280" y="251" text-anchor="middle" font-size="11.5" fill="var(--accent-strong)" font-weight="700">n.s. (&Delta;=+0.0001, CI incl. 0)</text>
+
+      <!-- D shuffled (volume-matched, corrected companion selection): frac 0.144 -> h=40.4 -->
+      <rect x="398" y="269.6" width="64" height="40.4" rx="3" fill="var(--sev-1)"></rect>
+      <text x="430" y="261.3" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)" class="num">0.176</text>
+
+      <!-- D mean: frac 0.269 -> h=75.3 -->
+      <rect x="498" y="234.7" width="64" height="75.3" rx="3" fill="var(--sev-2)"></rect>
+      <text x="530" y="226" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)" class="num">0.286</text>
+
+      <!-- D zero: frac 0.978 -> h=273.8 -->
+      <rect x="598" y="36.2" width="64" height="273.8" rx="3" fill="var(--sev-3)"></rect>
+      <text x="630" y="27" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)" class="num">4.607</text>
+
+      <!-- category labels -->
+      <g font-family="-apple-system,sans-serif" font-size="12" fill="var(--ink-secondary)" text-anchor="middle">
+        <text x="130" y="330">Model A</text>
+        <text x="230" y="330">D — true</text>
+        <text x="230" y="344">CNN</text>
+        <text x="330" y="330">D — predicted</text>
+        <text x="330" y="344">CNN (q<tspan baseline-shift="sub" font-size="9">A</tspan>)</text>
+        <text x="430" y="330">D — shuffled</text>
+        <text x="430" y="344">(volume)</text>
+        <text x="530" y="330">D — mean</text>
+        <text x="530" y="344">CNN</text>
+        <text x="630" y="330">D — zero</text>
+        <text x="630" y="344">CNN</text>
+      </g>
+    </svg>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--model-a)"></i>Open-loop baseline</span>
+      <span><i class="swatch" style="background:var(--accent)"></i>Real CNN feedback</span>
+      <span><i class="swatch" style="background:repeating-linear-gradient(45deg, var(--accent) 0 2px, var(--surface) 2px 4px); border:1px solid var(--accent-strong)"></i>Reconstructed from Model A info</span>
+      <span><i class="swatch" style="background:var(--sev-1)"></i>Realistic but mismatched</span>
+      <span><i class="swatch" style="background:var(--sev-2)"></i>Constant / uninformative</span>
+      <span><i class="swatch" style="background:var(--sev-3)"></i>Zeroed out</span>
+    </div>
+    <div class="chart-caption">185 validation simulations, paired bootstrap (5000 resamples, simulation as the independent unit). All non-baseline interventions significant vs. the true-CNN condition except the Model‑A‑predicted substitution.</div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="section-title">What this rules in and out</h2>
+  <div class="hyp-list">
+    <div class="hyp-row confirmed">
+      <div class="hyp-mark">&#10003;</div>
+      <div class="hyp-label">H2 — Confirmed</div>
+      <div class="hyp-desc">The CNN learns and uses a real growth representation, but that representation is <b>conditionally redundant</b> with what Model A already has. Both architectures parameterize the same coupled trajectory, just through different routes.</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-mark">&#10007;</div>
+      <div class="hyp-label">H1 — Ruled out</div>
+      <div class="hyp-desc">Not a case of the CNN carrying <b>genuinely distinct</b> information that Model A can't reconstruct — the substitution test shows it can, and it works.</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-mark">&#10007;</div>
+      <div class="hyp-label">H3 — Ruled out</div>
+      <div class="hyp-desc">Not a case of the pathway being <b>effectively ignored</b> — every intervention, including realistic mismatched features, measurably and significantly hurts performance.</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><b>Interpretation.</b> Models A and D reach comparable long-horizon accuracy not because growth feedback is architecturally irrelevant, but because they access substantially overlapping information about the same coupled mechanics&ndash;growth state through two different representations. Model A infers growth-relevant information implicitly from its mechanical trajectory and known simulation context; Model D receives an explicit, learned representation of the growth field &mdash; one that is itself reconstructible from what Model A already observes.</p>
+    <p>Physical relevance of an internal variable does not imply that giving a model explicit access to it will improve performance, when the variable's dynamically useful content is already recoverable from the retained state.</p>
+  </div>
+
+  <details class="caveats">
+    <summary>Caveats and scope</summary>
+    <div class="body">
+      <ul>
+        <li>Evidence types are kept distinct throughout: the decoding/correlation analyses show growth information is <i>recoverable</i> from a variable, which is weaker evidence than the inference-intervention and functional-substitution results showing it is <i>actually used</i> (the strongest evidence type here); the Jacobian sensitivity analysis is local-sensitivity evidence only, corroborating but not decisive on its own.</li>
+        <li>Bootstrap confidence intervals resample over the 185 validation <i>simulations</i> (each already collapsed to one trajectory-level scalar), not over autocorrelated timesteps — this is what makes them valid despite the underlying rollouts being time series. The three shuffle conditions' CIs specifically describe a companion-averaged (20-repeat) effect, a narrower question than the other conditions'.</li>
+        <li>The q<sub>A</sub> probe used for substitution was trained once (fixed seed) on Model D's own on-policy rollout trajectories; a multi-seed robustness check was not performed in this pass.</li>
+        <li>Intermediate-activation maps, dose-response amplitude scaling, physically-targeted counterfactual swaps, and a cross-model (B/C) comparison were explicitly deferred as lower-priority follow-ons, per the analysis's own scoping.</li>
+        <li>A units-mismatch bug (normalized vs. raw-physical inputs to the substitution probe) was caught and fixed during development, verified via an independent spot-check before the final substitution result was trusted.</li>
+      </ul>
+    </div>
+  </details>
+
+  <footer>Full methods and supplementary figures: <code>main_text_analyses/cnn_growth_feedback_conditional_utility/</code></footer>
+
+</div>
+</body>
+</html>

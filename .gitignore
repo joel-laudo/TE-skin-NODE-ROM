@@ -1,0 +1,25 @@
+# Generated outputs (regenerate via evaluation/generate_deliverables.py)
+/deliverables/
+
+# The full FE dataset (see data/DATA_AVAILABILITY.md) -- never commit real
+# data here; this also protects against accidentally tracking a multi-GB
+# zarr store a user places at the repo root while reproducing results.
+/*.zarr
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Internal self-verification/investigation notes (session narratives,
+# development-time provenance write-ups), not meant for the public repo
+/VALIDATION_REPORT.md
+report_*.md
+
+# Cluster job-submission scripts are site-specific (account names, module
+# names, partition names); the README documents the settings needed to
+# write your own instead of shipping one tied to our own cluster account.
+*.slurm

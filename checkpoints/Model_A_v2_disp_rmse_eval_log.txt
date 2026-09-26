@@ -1,0 +1,126 @@
+epoch=45 median_disp_rmse=0.716038
+  -> new BEST (epoch 45, median_disp_rmse=0.716038)
+epoch=50 median_disp_rmse=0.685920
+  -> new BEST (epoch 50, median_disp_rmse=0.685920)
+epoch=55 median_disp_rmse=0.618814
+  -> new BEST (epoch 55, median_disp_rmse=0.618814)
+epoch=60 median_disp_rmse=0.545085
+  -> new BEST (epoch 60, median_disp_rmse=0.545085)
+epoch=65 median_disp_rmse=1.242801
+epoch=70 median_disp_rmse=0.403945
+  -> new BEST (epoch 70, median_disp_rmse=0.403945)
+epoch=75 median_disp_rmse=1.071950
+epoch=80 median_disp_rmse=1.845764
+epoch=85 median_disp_rmse=0.351519
+  -> new BEST (epoch 85, median_disp_rmse=0.351519)
+epoch=90 median_disp_rmse=1.151228
+epoch=95 median_disp_rmse=1.340262
+epoch=100 median_disp_rmse=0.399402
+epoch=105 median_disp_rmse=0.929254
+epoch=110 median_disp_rmse=1.427768
+epoch=115 median_disp_rmse=1.331318
+epoch=120 median_disp_rmse=0.360749
+epoch=125 median_disp_rmse=1.016463
+epoch=130 median_disp_rmse=0.499410
+epoch=135 median_disp_rmse=1.922665
+epoch=140 median_disp_rmse=0.872228
+epoch=145 median_disp_rmse=0.664016
+epoch=150 median_disp_rmse=0.867088
+epoch=155 median_disp_rmse=0.462803
+epoch=160 median_disp_rmse=1.668916
+epoch=165 median_disp_rmse=0.606976
+epoch=170 median_disp_rmse=1.453825
+epoch=175 median_disp_rmse=0.871566
+epoch=180 median_disp_rmse=0.451261
+epoch=185 median_disp_rmse=1.034942
+epoch=190 median_disp_rmse=1.979523
+epoch=195 median_disp_rmse=0.867635
+epoch=200 median_disp_rmse=0.432162
+epoch=205 median_disp_rmse=1.403256
+epoch=210 median_disp_rmse=1.282271
+epoch=215 median_disp_rmse=0.224768
+  -> new BEST (epoch 215, median_disp_rmse=0.224768)
+epoch=220 median_disp_rmse=2.837679
+epoch=225 median_disp_rmse=0.844177
+epoch=230 median_disp_rmse=1.125651
+epoch=235 median_disp_rmse=1.691025
+epoch=240 median_disp_rmse=2.948854
+epoch=245 median_disp_rmse=1.661710
+epoch=250 median_disp_rmse=0.388706
+epoch=255 median_disp_rmse=1.256620
+epoch=260 median_disp_rmse=0.545447
+epoch=265 median_disp_rmse=0.953684
+epoch=270 median_disp_rmse=2.128684
+epoch=275 median_disp_rmse=4.315167
+epoch=280 median_disp_rmse=0.561021
+epoch=285 median_disp_rmse=0.494309
+epoch=290 median_disp_rmse=1.396771
+epoch=295 median_disp_rmse=1.221644
+epoch=300 median_disp_rmse=1.724084
+epoch=301 median_disp_rmse=0.790863
+epoch=302 median_disp_rmse=0.765701
+epoch=303 median_disp_rmse=0.930594
+epoch=304 median_disp_rmse=0.261980
+epoch=305 median_disp_rmse=0.951158
+epoch=306 median_disp_rmse=0.782665
+epoch=307 median_disp_rmse=0.379081
+epoch=308 median_disp_rmse=0.625476
+epoch=309 median_disp_rmse=0.473685
+epoch=310 median_disp_rmse=0.233984
+epoch=311 median_disp_rmse=0.249841
+epoch=312 median_disp_rmse=0.581903
+epoch=313 median_disp_rmse=0.982927
+epoch=314 median_disp_rmse=0.931338
+epoch=315 median_disp_rmse=0.953241
+epoch=316 median_disp_rmse=0.722930
+epoch=317 median_disp_rmse=0.326769
+epoch=318 median_disp_rmse=0.820151
+epoch=319 median_disp_rmse=1.457580
+epoch=320 median_disp_rmse=0.390220
+epoch=321 median_disp_rmse=1.115039
+epoch=322 median_disp_rmse=0.785033
+epoch=323 median_disp_rmse=0.195651
+  -> new BEST (epoch 323, median_disp_rmse=0.195651)
+epoch=324 median_disp_rmse=0.314052
+epoch=325 median_disp_rmse=0.735971
+epoch=326 median_disp_rmse=0.205799
+epoch=327 median_disp_rmse=0.335842
+epoch=328 median_disp_rmse=0.296844
+epoch=329 median_disp_rmse=0.419917
+epoch=330 median_disp_rmse=0.276496
+epoch=331 median_disp_rmse=0.194141
+  -> new BEST (epoch 331, median_disp_rmse=0.194141)
+epoch=332 median_disp_rmse=0.905826
+epoch=333 median_disp_rmse=0.175258
+  -> new BEST (epoch 333, median_disp_rmse=0.175258)
+epoch=334 median_disp_rmse=0.401677
+epoch=335 median_disp_rmse=0.176557
+epoch=336 median_disp_rmse=0.601796
+epoch=337 median_disp_rmse=0.457795
+epoch=338 median_disp_rmse=0.212277
+epoch=339 median_disp_rmse=0.500558
+epoch=340 median_disp_rmse=0.163685
+  -> new BEST (epoch 340, median_disp_rmse=0.163685)
+epoch=341 median_disp_rmse=0.245782
+epoch=342 median_disp_rmse=0.570865
+epoch=343 median_disp_rmse=0.201856
+epoch=344 median_disp_rmse=0.203012
+epoch=345 median_disp_rmse=0.166583
+epoch=346 median_disp_rmse=0.275321
+epoch=347 median_disp_rmse=0.258295
+epoch=348 median_disp_rmse=0.147245
+  -> new BEST (epoch 348, median_disp_rmse=0.147245)
+epoch=349 median_disp_rmse=0.176746
+epoch=350 median_disp_rmse=0.173276
+epoch=351 median_disp_rmse=0.163315
+epoch=352 median_disp_rmse=0.168846
+epoch=353 median_disp_rmse=0.137052
+  -> new BEST (epoch 353, median_disp_rmse=0.137052)
+epoch=354 median_disp_rmse=0.140678
+epoch=355 median_disp_rmse=0.164744
+epoch=356 median_disp_rmse=0.133681
+  -> new BEST (epoch 356, median_disp_rmse=0.133681)
+epoch=357 median_disp_rmse=0.139052
+epoch=358 median_disp_rmse=0.143477
+epoch=359 median_disp_rmse=0.143598
+epoch=360 median_disp_rmse=0.139551

@@ -1,0 +1,168 @@
+epoch=45 median_disp_rmse=0.716036
+  -> new BEST (epoch 45, median_disp_rmse=0.716036)
+epoch=50 median_disp_rmse=0.685929
+  -> new BEST (epoch 50, median_disp_rmse=0.685929)
+epoch=55 median_disp_rmse=0.618814
+  -> new BEST (epoch 55, median_disp_rmse=0.618814)
+epoch=60 median_disp_rmse=0.545088
+  -> new BEST (epoch 60, median_disp_rmse=0.545088)
+epoch=65 median_disp_rmse=1.242779
+epoch=70 median_disp_rmse=0.403943
+  -> new BEST (epoch 70, median_disp_rmse=0.403943)
+epoch=75 median_disp_rmse=1.071951
+epoch=80 median_disp_rmse=1.845761
+epoch=85 median_disp_rmse=0.351515
+  -> new BEST (epoch 85, median_disp_rmse=0.351515)
+epoch=90 median_disp_rmse=1.151225
+epoch=95 median_disp_rmse=1.340255
+epoch=100 median_disp_rmse=0.399396
+epoch=105 median_disp_rmse=0.929266
+epoch=110 median_disp_rmse=1.427775
+epoch=115 median_disp_rmse=1.331317
+epoch=120 median_disp_rmse=0.360748
+epoch=125 median_disp_rmse=1.016465
+epoch=130 median_disp_rmse=0.499433
+epoch=135 median_disp_rmse=1.922678
+epoch=140 median_disp_rmse=0.872222
+epoch=145 median_disp_rmse=0.664013
+epoch=150 median_disp_rmse=0.867071
+epoch=155 median_disp_rmse=0.462792
+epoch=160 median_disp_rmse=1.668904
+epoch=165 median_disp_rmse=0.607027
+epoch=170 median_disp_rmse=1.454009
+epoch=175 median_disp_rmse=0.871668
+epoch=180 median_disp_rmse=0.451690
+epoch=185 median_disp_rmse=1.034421
+epoch=190 median_disp_rmse=1.979150
+epoch=195 median_disp_rmse=0.868150
+epoch=200 median_disp_rmse=0.431808
+epoch=205 median_disp_rmse=1.404176
+epoch=210 median_disp_rmse=1.282336
+epoch=215 median_disp_rmse=0.224761
+  -> new BEST (epoch 215, median_disp_rmse=0.224761)
+epoch=220 median_disp_rmse=2.836477
+epoch=225 median_disp_rmse=0.842864
+epoch=230 median_disp_rmse=1.126979
+epoch=235 median_disp_rmse=1.690993
+epoch=240 median_disp_rmse=2.948385
+epoch=245 median_disp_rmse=1.659009
+epoch=250 median_disp_rmse=0.394055
+epoch=255 median_disp_rmse=1.257439
+epoch=260 median_disp_rmse=0.543091
+epoch=265 median_disp_rmse=0.950425
+epoch=270 median_disp_rmse=2.133435
+epoch=275 median_disp_rmse=4.315578
+epoch=280 median_disp_rmse=0.559019
+epoch=285 median_disp_rmse=0.494443
+epoch=290 median_disp_rmse=1.396650
+epoch=295 median_disp_rmse=1.224013
+epoch=300 median_disp_rmse=1.721879
+epoch=305 median_disp_rmse=0.946886
+epoch=310 median_disp_rmse=0.220311
+  -> new BEST (epoch 310, median_disp_rmse=0.220311)
+epoch=315 median_disp_rmse=0.773308
+epoch=320 median_disp_rmse=0.494401
+epoch=325 median_disp_rmse=0.647805
+epoch=330 median_disp_rmse=0.219383
+  -> new BEST (epoch 330, median_disp_rmse=0.219383)
+epoch=335 median_disp_rmse=0.282629
+epoch=340 median_disp_rmse=0.303373
+epoch=345 median_disp_rmse=0.491191
+epoch=350 median_disp_rmse=0.444131
+epoch=355 median_disp_rmse=0.524389
+epoch=360 median_disp_rmse=0.984153
+epoch=365 median_disp_rmse=0.689703
+epoch=370 median_disp_rmse=0.759645
+epoch=375 median_disp_rmse=0.305091
+epoch=380 median_disp_rmse=0.292717
+epoch=385 median_disp_rmse=0.372651
+epoch=390 median_disp_rmse=1.333868
+epoch=395 median_disp_rmse=0.535809
+epoch=400 median_disp_rmse=0.374550
+epoch=405 median_disp_rmse=0.429320
+epoch=410 median_disp_rmse=0.377861
+epoch=415 median_disp_rmse=0.997889
+epoch=420 median_disp_rmse=0.592766
+epoch=425 median_disp_rmse=0.296118
+epoch=430 median_disp_rmse=0.470923
+epoch=435 median_disp_rmse=0.748404
+epoch=440 median_disp_rmse=1.056894
+epoch=445 median_disp_rmse=0.495068
+epoch=450 median_disp_rmse=0.444054
+epoch=455 median_disp_rmse=0.282060
+epoch=460 median_disp_rmse=1.860180
+epoch=465 median_disp_rmse=0.257464
+epoch=470 median_disp_rmse=0.187552
+  -> new BEST (epoch 470, median_disp_rmse=0.187552)
+epoch=475 median_disp_rmse=0.699140
+epoch=480 median_disp_rmse=2.468063
+epoch=485 median_disp_rmse=1.525345
+epoch=490 median_disp_rmse=0.326379
+epoch=495 median_disp_rmse=0.215693
+epoch=500 median_disp_rmse=0.395065
+epoch=501 median_disp_rmse=0.318133
+epoch=502 median_disp_rmse=0.954585
+epoch=503 median_disp_rmse=1.204737
+epoch=504 median_disp_rmse=1.119376
+epoch=505 median_disp_rmse=0.795833
+epoch=506 median_disp_rmse=0.956983
+epoch=507 median_disp_rmse=0.434417
+epoch=508 median_disp_rmse=0.298223
+epoch=509 median_disp_rmse=0.380489
+epoch=510 median_disp_rmse=0.413717
+epoch=511 median_disp_rmse=0.940087
+epoch=512 median_disp_rmse=0.303015
+epoch=513 median_disp_rmse=0.563181
+epoch=514 median_disp_rmse=0.426197
+epoch=515 median_disp_rmse=0.822555
+epoch=516 median_disp_rmse=0.382065
+epoch=517 median_disp_rmse=0.401126
+epoch=518 median_disp_rmse=0.849056
+epoch=519 median_disp_rmse=0.338361
+epoch=520 median_disp_rmse=0.669503
+epoch=521 median_disp_rmse=0.422562
+epoch=522 median_disp_rmse=0.264287
+epoch=523 median_disp_rmse=0.162080
+  -> new BEST (epoch 523, median_disp_rmse=0.162080)
+epoch=524 median_disp_rmse=1.364853
+epoch=525 median_disp_rmse=1.137447
+epoch=526 median_disp_rmse=0.213330
+epoch=527 median_disp_rmse=0.386542
+epoch=528 median_disp_rmse=0.337049
+epoch=529 median_disp_rmse=0.292525
+epoch=530 median_disp_rmse=0.464834
+epoch=531 median_disp_rmse=0.612963
+epoch=532 median_disp_rmse=0.383127
+epoch=533 median_disp_rmse=0.185005
+epoch=534 median_disp_rmse=0.315907
+epoch=535 median_disp_rmse=0.196723
+epoch=536 median_disp_rmse=0.255121
+epoch=537 median_disp_rmse=0.181847
+epoch=538 median_disp_rmse=0.399849
+epoch=539 median_disp_rmse=0.175310
+epoch=540 median_disp_rmse=0.224955
+epoch=541 median_disp_rmse=0.295564
+epoch=542 median_disp_rmse=0.526622
+epoch=543 median_disp_rmse=0.203456
+epoch=544 median_disp_rmse=0.159664
+  -> new BEST (epoch 544, median_disp_rmse=0.159664)
+epoch=545 median_disp_rmse=0.159477
+  -> new BEST (epoch 545, median_disp_rmse=0.159477)
+epoch=546 median_disp_rmse=0.160179
+epoch=547 median_disp_rmse=0.176511
+epoch=548 median_disp_rmse=0.167205
+epoch=549 median_disp_rmse=0.327868
+epoch=550 median_disp_rmse=0.180222
+epoch=551 median_disp_rmse=0.161733
+epoch=552 median_disp_rmse=0.141217
+  -> new BEST (epoch 552, median_disp_rmse=0.141217)
+epoch=553 median_disp_rmse=0.174599
+epoch=554 median_disp_rmse=0.159830
+epoch=555 median_disp_rmse=0.192804
+epoch=556 median_disp_rmse=0.167886
+epoch=557 median_disp_rmse=0.138782
+  -> new BEST (epoch 557, median_disp_rmse=0.138782)
+epoch=558 median_disp_rmse=0.146092
+epoch=559 median_disp_rmse=0.146229
+epoch=560 median_disp_rmse=0.136109
+  -> new BEST (epoch 560, median_disp_rmse=0.136109)

@@ -1,0 +1,14 @@
+# Reference package pins from the machine that produced the checkpoints and
+# zarr data stores used by this benchmark (queried live -- see
+# benchmark_runtime.py's provenance.json output for the environment actually
+# used at run time). Exact version matches aren't required to reproduce the
+# benchmark; run the one-line check in README.md before submitting, and diff
+# its output against this file -- the zarr major version in particular (3.x)
+# matters for reading the zarr stores correctly.
+#
+# python == 3.13.9
+torch==2.10.0
+numpy==2.3.5
+zarr==3.1.5
+numba==0.62.1
+matplotlib==3.10.6

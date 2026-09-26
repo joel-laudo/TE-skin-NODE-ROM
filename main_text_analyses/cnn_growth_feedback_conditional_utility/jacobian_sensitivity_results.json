@@ -1,0 +1,25 @@
+{
+  "jacobian_fro_norm_mean": 0.2855819715373218,
+  "jacobian_fro_norm_median": 0.18515408784151077,
+  "jacobian_fro_norm_std": 0.2481446229682506,
+  "per_feature_mean_sensitivity": [
+    0.07663953896379098,
+    0.0729100607726723,
+    0.06976429520966484,
+    0.061584373228251936,
+    0.07788301300536841,
+    0.044633507168386134,
+    0.06266863164794631,
+    0.06923499369900674,
+    0.07262119851820172,
+    0.08634677070751787,
+    0.06520000680629164,
+    0.05649311671964824,
+    0.04251815394428558,
+    0.07631578712025658,
+    0.057406490272609516,
+    0.07476957313437015
+  ],
+  "n_sampled": 2000,
+  "caveat": "Local sensitivity only -- not proof of global importance. The intervention-sweep results are the decisive evidence for whether the NODE uses h_g."
+}

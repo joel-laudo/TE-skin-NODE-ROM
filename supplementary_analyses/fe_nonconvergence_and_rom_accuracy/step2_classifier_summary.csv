@@ -1,0 +1,4 @@
+model,cv_pr_auc,cv_roc_auc
+logistic_regression,0.1522259841784084,0.6283784782255324
+random_forest,0.4055265655489863,0.8389561259623768
+baseline_prevalence,0.073,0.5

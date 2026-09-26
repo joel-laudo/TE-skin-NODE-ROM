@@ -1,0 +1,18 @@
+{
+  "A": {
+    "global_best_epoch": 560,
+    "global_best_rmse": 0.136109,
+    "changed": false,
+    "failed": [],
+    "n_training": 152,
+    "n_retro": 160
+  },
+  "D": {
+    "global_best_epoch": 558,
+    "global_best_rmse": 0.134388,
+    "changed": false,
+    "failed": [],
+    "n_training": 152,
+    "n_retro": 160
+  }
+}

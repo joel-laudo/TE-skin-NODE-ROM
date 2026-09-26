@@ -1,0 +1,4 @@
+﻿[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+Jacobian Frobenius norm: mean=0.2856  median=0.1852  std=0.2481
+saved jacobian_sensitivity_results.json
+DONE

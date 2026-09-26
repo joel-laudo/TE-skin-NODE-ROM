@@ -1,0 +1,6 @@
+﻿Gxi = [0.5 0.  0. ]
+Geta = [0.  0.5 0. ]
+d_z vs d_h: pearson=0.560 spearman=0.547
+d_g vs d_h: pearson=0.674 spearman=0.831
+saved representation_structure_results.json
+DONE

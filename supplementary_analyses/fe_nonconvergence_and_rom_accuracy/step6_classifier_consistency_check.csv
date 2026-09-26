@@ -1,0 +1,4 @@
+model,cv_pr_auc,cv_roc_auc
+canonical_rf_8raw,0.4030288215013806,0.8133173737642416
+interaction_augmented_rf,0.4075760224305621,0.8391038997502623
+pearson_corr_between_variants,0.8462920818690077,

@@ -1,0 +1,11 @@
+﻿=== 2A: h_g -> growth_pca ===
+  linear: R2_global=0.8424  rmse_norm=0.3970
+  MLP:    R2_global=0.9820  rmse_norm=0.1340
+  MLP per-mode R2: ['0.990', '0.993', '0.993', '0.987', '0.995', '0.993', '0.994', '0.994', '0.990', '0.978', '0.941', '0.976', '0.922', '0.973', '0.963', '0.929']
+=== 2B: h_g -> Ag / mean_lambda_g1 / mean_lambda_g2 ===
+  Ag: linear R2=0.9491  MLP R2=0.9883  Spearman=0.9770  RMSE(physical units)=1.7484
+  mean_lambda_g1: linear R2=0.9693  MLP R2=0.9955  Spearman=0.9918  RMSE(physical units)=0.0005
+  mean_lambda_g2: linear R2=0.9256  MLP R2=0.9841  Spearman=0.9639  RMSE(physical units)=0.0013
+=== 2C: PCA of h_g, correlate PCs against physical quantities ===
+saved growth_decoding_results.json
+DONE

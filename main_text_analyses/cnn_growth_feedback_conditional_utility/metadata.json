@@ -1,0 +1,19 @@
+{
+  "model_D_ckpt": "FINAL_models/Model_D_ablation_fullrollout_v2/Model_D_CNN_r9_BEST.pt",
+  "r_modes": 9,
+  "H": 60,
+  "W": 60,
+  "dim_gfeat": 16,
+  "n_val_sims": 185,
+  "n_train_sims": 742,
+  "n_train_failed": 0,
+  "val_rows": 8245,
+  "train_rows": 33992,
+  "modelA_inputs_convention": "[z(10, incl. volume as z[:,9]), e, I, sp, design(7)] -- raw physical units, NOT normalized. Identical structurally to Model A's own NODE input and to Model D's x_base (VelocityNet.forward's first argument).",
+  "on_policy": true,
+  "on_policy_note": "All features extracted from Model D's own realized rollout trajectory (own predicted z, e, I, growth field), not FE ground truth -- i.e. no teacher forcing, matching how the intervention-sweep and functional-substitution analyses use these features.",
+  "growth_pca_source": "growth_pca_trainonly_H60_W60_k8_val0.20_seed123.npz",
+  "growth_pca_convention": "Bit-for-bit matches X_pca_all_norm's own convention: per-channel PCA (mean_x/components_x, mean_y/components_y) then normalized by the basis's own train-only pca_feat_mean/pca_feat_std.",
+  "val_zarr_source": "Model D validation rollouts (r=9), as produced by evaluation/generate_deliverables.py",
+  "generated_at": "2026-09-04 15:10:29"
+}

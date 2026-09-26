@@ -1,0 +1,23 @@
+# Reference package pins from the environment that produced the checkpoints,
+# training/eval logs, and zarr-based intermediate data referenced throughout
+# this repository. python == 3.13.9.
+#
+# zarr's major version matters: the zarr-store I/O helpers in
+# evaluation/shared_eval_utils.py and evaluation/eval_model_a.py use the
+# zarr 3.1.x Group.create_dataset API, which newer 3.x zarr releases (e.g.
+# 3.4+) removed/renamed. Do not casually upgrade zarr.
+torch==2.10.0
+numpy==2.3.5
+zarr==3.1.5
+numba==0.62.1
+matplotlib==3.10.6
+
+# Used only by supplementary_analyses/ and main_text_analyses/ (classifiers,
+# correlation stats, tabular joins) -- no exact-version provenance recorded
+# for these three, so left unpinned; any recent release should work.
+scipy
+scikit-learn
+pandas
+
+# Only needed to open/re-run the notebooks in data_processing/.
+jupyter

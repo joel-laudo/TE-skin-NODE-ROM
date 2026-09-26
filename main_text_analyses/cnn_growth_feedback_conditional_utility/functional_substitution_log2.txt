@@ -1,0 +1,214 @@
+﻿Gxi = [0.5 0.  0. ]
+Geta = [0.  0.5 0. ]
+[infer vanilla NODE arch]
+  D_state = 10
+  hidden  = 128
+Loaded vanilla model OK.
+Checkpoint keys: ['model_state_dict', 'dt_nominal', 'latent_state_dim', 'input_dim', 'r_modes', 'train_losses', 'val_losses', 'lambda_rollout', 'warmup_epochs', 'n_epochs', 'volume_caps', 'vol_stage_epochs_list', 'frac_new_by_stage', 'lambda_overpred_ag', 'ag_rel_floor_cm2', 'ag_tol_cm2', 'ag_over_cap_cm2', 'roll_raw_means', 'roll_sum_means', 'roll_used_means', 'ag_over_means', 'ag_over_fracs', 'cap_fracs', 'z_mean', 'z_std', 'sp_mean', 'sp_std', 'design_mean', 'design_std', 'e_mean', 'e_std', 'I_mean', 'I_std', 'g_mean', 'g_std', 'final_ag_mean', 'final_ag_std']
+Aux present: False
+=== Model A (from cache) ===
+[bottom mapping] Ne=7200, grid H=60, W=60, H*W=3600
+[bottom mapping] per-cell counts: min=2, max=2, unique occupied cells=3600
+[bottom mapping] selected bottom elems: 3600 (should equal H*W)
+  disp_rmse_median=0.1337  ag_median=1.2272
+=== Model D - predicted CNN (q_A, online) ===
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+  50/185 sims done
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+  100/185 sims done
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+  150/185 sims done
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+[infer CNN-NODE arch] D_state=10 hidden=128 dim_gfeat=16 growth_in_channels=2 base_channels=16
+  disp_rmse_median=0.1406  ag_median=1.2029
+
+=== FINAL COMPARISON TABLE ===
+  Model_A                      disp_rmse_median=0.1337  ag_median=1.2272
+  Model_D_true_CNN             disp_rmse_median=0.1433  ag_median=1.1617
+  Model_D_predicted_CNN        disp_rmse_median=0.1406  ag_median=1.2029
+  Model_D_shuffled_CNN_volume  disp_rmse_median=0.1840  ag_median=1.1923
+  Model_D_mean_CNN             disp_rmse_median=0.2863  ag_median=1.3436
+  Model_D_zero_CNN             disp_rmse_median=4.6070  ag_median=46.7441
+  predicted-CNN vs true-CNN delta = +0.0001  95% CI=[-0.0005, +0.0007]
+saved functional_substitution_results.json
+DONE
